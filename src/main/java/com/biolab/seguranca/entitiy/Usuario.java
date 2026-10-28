@@ -16,15 +16,19 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Usuario {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private UUID Id;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
     private String nome;
+
     @Email
     private String email;
+
     @Size(min = 6)
-    private String Senha;
+    private String senha;
+
     @Enumerated(EnumType.STRING)
     private Role role;
-
 }
