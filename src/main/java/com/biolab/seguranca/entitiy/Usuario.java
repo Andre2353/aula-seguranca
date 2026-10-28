@@ -19,7 +19,7 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private UUID Id;
-    private String name;
+    private String nome;
     @Email
     private String email;
     @Size(min = 6)
